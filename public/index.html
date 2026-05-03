@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Women Clothing Store</title>
+</head>
+<body>
+  <h1>Women Clothing Store 👗</h1>
+  <div id="products"></div>
+
+  <script>
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => {
+        let html = '';
+        data.forEach(p => {
+          html += `<p>${p.name} - ${p.price}</p>`;
+        });
+        document.getElementById('products').innerHTML = html;
+      });
+  </script>
+</body>
+</html>

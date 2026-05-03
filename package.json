@@ -1,0 +1,14 @@
+{
+  "name": "women-clothing-app",
+  "version": "1.0.0",
+  "description": "Simple women clothing website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "nilofar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
