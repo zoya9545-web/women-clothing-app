@@ -1,4 +1,4 @@
-name: Build and Deploy to Azure
+name: CI Pipeline
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Login to Docker Hub
