@@ -10,11 +10,15 @@ const products = [
   { name: "Jeans", price: "₹1199" }
 ];
 
+// ✅ ROOT ROUTE (IMPORTANT FIX)
+app.get('/', (req, res) => {
+  res.send("Women Clothing App is running 🚀");
+});
+
 app.get('/api/products', (req, res) => {
   res.json(products);
 });
 
-// ✅ FINAL FIX
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, "0.0.0.0", () => {
